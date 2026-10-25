@@ -2,45 +2,446 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Мій світ ІТ</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #eaf7ef;
-            color: #243b35;
-            text-align: center;
-            padding: 40px;
-        }
-        h1 { color: #239b68; }
-        section {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 600px;
-            border-radius: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veronika.dev | Мій світ ІТ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1513;
+      color: #f1fff5;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(100% - 36px, 1000px);
+      margin: auto;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid #294239;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      color: #74e0a2;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a, .button {
+      color: #d5e8dc;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .tag {
+      color: #74e0a2;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 66px);
+      line-height: 1.15;
+      margin: 20px 0;
+      max-width: 750px;
+    }
+
+    h1 span {
+      color: #74e0a2;
+    }
+
+    .intro {
+      color: #b6c9bf;
+      max-width: 620px;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 22px;
+      background: #74e0a2;
+      color: #10241a;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 35px 0;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #152720;
+      border: 1px solid #294239;
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #74e0a2;
+    }
+
+    .symbol {
+      font-size: 30px;
+    }
+
+    .card h3 {
+      color: #74e0a2;
+      margin: 10px 0;
+    }
+
+    .card p, .about p {
+      color: #b6c9bf;
+    }
+
+    .about {
+      background: #101e19;
+      border: 1px solid #294239;
+      padding: 28px;
+      border-radius: 16px;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding: 25px 0;
+      border-top: 1px solid #294239;
+      text-align: center;
+      color: #8ca99a;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        padding-top: 60px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Світ інформаційних технологій 💻</h1>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">VERONIKA.dev</div>
+        <a href="#about">Про мене ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <p class="tag">ПРИВІТ! Я ВЕРОНІКА 👋</p>
+      <h1>Моє майбутнє — у світі <span>технологій.</span></h1>
+      <p class="intro">
+        Я студентка ВСП РФК НУБіП України.
+        Вивчаю інформаційні системи та технології,
+        розвиваю навички програмування й цікавлюся кібербезпекою.
+      </p>
+      <a class="button" href="#about">Дізнатися більше →</a>
+    </div>
 
     <section>
-        <h2>Про мене</h2>
-        <p>Мене звати Вероніка Бобер.</p>
-        <p>Я студентка РФК НУБіП України.</p>
-        <p>Моя спеціальність — інформаційні системи та технології.</p>
+      <p class="tag">MY INTERESTS</p>
+      <h2>Що мене захоплює</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="symbol">💻</div>
+          <h3>Програмування</h3>
+          <p>Вчуся створювати сайти та втілювати власні ідеї в коді.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🛡️</div>
+          <h3>Кібербезпека</h3>
+          <p>Хочу навчитися захищати інформацію та цифрові системи.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🚀</div>
+          <h3>Мій розвиток</h3>
+          <p>Поступово здобуваю знання та створюю свої перші проєкти.</p>
+        </article>
+      </div>
     </section>
 
-    <section>
-        <h2>Що таке ІТ?</h2>
-        <p>Інформаційні технології допомагають створювати,
-        зберігати, обробляти та передавати інформацію.</p>
+    <section id="about">
+      <p class="tag">ABOUT ME</p>
+      <h2>Трохи про мене</h2>
+      <div class="about">
+        <p>
+          Мене звати Вероніка Бобер. Я навчаюся у ВСП РФК НУБіП України
+          та відкриваю для себе можливості інформаційних технологій.
+          Моя мета — розвиватися в ІТ, поглиблювати знання з програмування
+          та в майбутньому рухатися в напрямі кібербезпеки.
+        </p>
+      </div>
     </section>
+  </main>
 
-    <section>
-        <h2>Мої інтереси</h2>
-        <p>Програмування • Комп'ютери • Кібербезпека</p>
-    </section>
+  <footer>
+    <div class="container">
+      Створено Веронікою Бобер · Мій перший вебпроєкт © 2026
+    </div>
+  </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veronika.dev | Мій світ ІТ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1513;
+      color: #f1fff5;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(100% - 36px, 1000px);
+      margin: auto;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid #294239;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      color: #74e0a2;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a, .button {
+      color: #d5e8dc;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .tag {
+      color: #74e0a2;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 66px);
+      line-height: 1.15;
+      margin: 20px 0;
+      max-width: 750px;
+    }
+
+    h1 span {
+      color: #74e0a2;
+    }
+
+    .intro {
+      color: #b6c9bf;
+      max-width: 620px;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 22px;
+      background: #74e0a2;
+      color: #10241a;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 35px 0;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #152720;
+      border: 1px solid #294239;
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #74e0a2;
+    }
+
+    .symbol {
+      font-size: 30px;
+    }
+
+    .card h3 {
+      color: #74e0a2;
+      margin: 10px 0;
+    }
+
+    .card p, .about p {
+      color: #b6c9bf;
+    }
+
+    .about {
+      background: #101e19;
+      border: 1px solid #294239;
+      padding: 28px;
+      border-radius: 16px;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding: 25px 0;
+      border-top: 1px solid #294239;
+      text-align: center;
+      color: #8ca99a;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        padding-top: 60px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">VERONIKA.dev</div>
+        <a href="#about">Про мене ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <p class="tag">ПРИВІТ! Я ВЕРОНІКА 👋</p>
+      <h1>Моє майбутнє — у світі <span>технологій.</span></h1>
+      <p class="intro">
+        Я студентка ВСП РФК НУБіП України.
+        Вивчаю інформаційні системи та технології,
+        розвиваю навички програмування й цікавлюся кібербезпекою.
+      </p>
+      <a class="button" href="#about">Дізнатися більше →</a>
+    </div>
+
+    <section>
+      <p class="tag">MY INTERESTS</p>
+      <h2>Що мене захоплює</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="symbol">💻</div>
+          <h3>Програмування</h3>
+          <p>Вчуся створювати сайти та втілювати власні ідеї в коді.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🛡️</div>
+          <h3>Кібербезпека</h3>
+          <p>Хочу навчитися захищати інформацію та цифрові системи.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🚀</div>
+          <h3>Мій розвиток</h3>
+          <p>Поступово здобуваю знання та створюю свої перші проєкти.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="tag">ABOUT ME</p>
+      <h2>Трохи про мене</h2>
+      <div class="about">
+        <p>
+          Мене звати Вероніка Бобер. Я навчаюся у ВСП РФК НУБіП України
+          та відкриваю для себе можливості інформаційних технологій.
+          Моя мета — розвиватися в ІТ, поглиблювати знання з програмування
+          та в майбутньому рухатися в напрямі кібербезпеки.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Створено Веронікою Бобер · Мій перший вебпроєкт © 2026
+    </div>
+  </footer>
+</body>
+</html>
+
